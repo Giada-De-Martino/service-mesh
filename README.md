@@ -97,7 +97,21 @@ istioctl dashboard kiali
 ```
 This will open Kiali in your browser, providing insights into the service mesh topology and traffic flows.
 
-### 8. Uninstall and Cleanup
+### 8. Define the service versions
+Run the following command to create default destination rules for the Bookinfo services:
+```sh
+kubectl apply -f networking/destination-rule-all.yaml
+```
+
+Wait a few seconds for the destination rules to propagate.
+
+You can display the destination rules with the following command:
+```sh
+kubectl get destinationrules -o yaml
+```
+
+
+### Uninstall and Cleanup
 To remove all deployed resources and uninstall Istio, run:
 ```sh
 kubectl delete -f addons
