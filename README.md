@@ -20,7 +20,7 @@ minikube start
 ### 2. Install Istio
 Install Istio using the provided demo profile configuration:
 ```sh
-istioctl install -f demo-profile-no-gateways.yaml -y
+istioctl install -f demo.yaml -y
 ```
 Enable automatic sidecar injection for the `default` namespace:
 ```sh
